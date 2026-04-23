@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitAI Protein Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="glow-circle"></div>
+
+<header>
+  <h1>FitAI Protein Lab 💪</h1>
+  <p>AI-Based Personalized Protein System</p>
+</header>
+
+<section class="user-input">
+  <h2>Enter Your Details</h2>
+
+  <input type="number" id="weight" placeholder="Enter weight (kg)">
+  
+  <select id="goal">
+    <option value="muscle">Muscle Gain</option>
+    <option value="fatloss">Fat Loss</option>
+    <option value="fitness">General Fitness</option>
+  </select>
+
+  <button onclick="analyzeUser()">Analyze</button>
+</section>
+
+<section id="dashboard" class="hidden">
+  <h2>Your AI Fitness Report</h2>
+  <p id="proteinNeed"></p>
+  <p id="recommendation"></p>
+</section>
+
+<section class="blend-section">
+  <h2>Build Your Custom Protein</h2>
+
+  <div class="product" onclick="toggleProduct(event,'whey')">
+    Whey Protein (₹500 | 25g protein)
+  </div>
+
+  <div class="product" onclick="toggleProduct(event,'plant')">
+    Plant Protein (₹400 | 20g protein)
+  </div>
+
+  <div class="product" onclick="toggleProduct(event,'casein')">
+    Casein Protein (₹450 | 22g protein)
+  </div>
+
+  <h3>Total Price: ₹<span id="price">0</span></h3>
+  <h3>Total Protein: <span id="protein">0</span>g</h3>
+
+  <button onclick="checkout()">Buy Now</button>
+</section>
+
+<footer>
+  <p>© 2026 FitAI</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
